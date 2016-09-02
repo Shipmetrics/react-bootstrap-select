@@ -54,7 +54,7 @@ var BootstrapSelect = React.createClass({displayName: 'BootstrapSelect',
   },
   render: function () {
     return (
-      <FormControl {...this.props} componentClass='select' />
+      React.createElement(FormControl, Object.assign({},  this.props, {componentClass: "select"}))
     );
   }
 });
