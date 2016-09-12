@@ -18,6 +18,7 @@ var BootstrapSelect = React.createClass({displayName: 'BootstrapSelect',
     select.toggleClass('open', this.state.open);
   },
   componentWillUnmount: function () {
+      console.log('unmounting')
     var self = this;
     var select = $(ReactDOM.findDOMNode(this)).find('select');
 
@@ -51,6 +52,7 @@ var BootstrapSelect = React.createClass({displayName: 'BootstrapSelect',
       if (self.props.multiple) return;
       self.setState({ open: !self.state.open });
     });
+    $('.selectpicker').selectpicker('render')
   },
   render: function () {
     return (
